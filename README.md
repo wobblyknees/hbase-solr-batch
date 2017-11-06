@@ -36,6 +36,13 @@ export HADOOP_OPTS="-Djava.security.auth.login.config=/home/cloudera/hbase-solr-
 
 NOTE: If using TLS, ensure your truststores are setup correctly as well - I set it at JAVA_HOME level
 
+We need to make sure that the morphlines.conf is accessible on all datanodes
+
+```
+scp morphlines.conf <user>@<host>/opt/cloudera/hbase-solr/
+```
+
+
 Run the MR Indexer
 
 ```
